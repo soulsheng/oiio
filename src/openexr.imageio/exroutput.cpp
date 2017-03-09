@@ -53,7 +53,7 @@
 #include <OpenEXR/ImfStringAttribute.h>
 #include <OpenEXR/ImfTimeCodeAttribute.h>
 #include <OpenEXR/ImfKeyCodeAttribute.h>
-#include <OpenEXR/ImfBoxAttribute.h>
+//#include <OpenEXR/ImfBoxAttribute.h>
 #include <OpenEXR/ImfEnvmapAttribute.h>
 #include <OpenEXR/ImfCompressionAttribute.h>
 #include <OpenEXR/ImfCRgbaFile.h>  // JUST to get symbols to figure out version!
@@ -1054,7 +1054,7 @@ OpenEXROutput::put_parameter (const std::string &name, TypeDesc type,
             header.insert(xname.c_str(), Imf::KeyCodeAttribute (*(Imf::KeyCode*)data));
             return true;
         }
-
+#if 0
         // 2 Vec2's are treated as a Box
         if (type.arraylen == 2 && type.aggregate == TypeDesc::VEC2) {
             switch (type.basetype) {
@@ -1071,6 +1071,7 @@ OpenEXROutput::put_parameter (const std::string &name, TypeDesc type,
                 }
             }
         }
+#endif
         // Vec 2
         if (type.arraylen == 2 && type.aggregate == TypeDesc::SCALAR) {
             switch (type.basetype) {

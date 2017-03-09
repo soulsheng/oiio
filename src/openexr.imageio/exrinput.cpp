@@ -52,7 +52,7 @@
 #include <OpenEXR/ImfMatrixAttribute.h>
 #include <OpenEXR/ImfVecAttribute.h>
 #include <OpenEXR/ImfVecAttribute.h>
-#include <OpenEXR/ImfBoxAttribute.h>
+//#include <OpenEXR/ImfBoxAttribute.h>
 #include <OpenEXR/ImfStringAttribute.h>
 #include <OpenEXR/ImfTimeCodeAttribute.h>
 #include <OpenEXR/ImfKeyCodeAttribute.h>
@@ -559,8 +559,10 @@ OpenEXRInput::PartInfo::parse_header (const Imf::Header *header)
         const Imf::V3iAttribute *v3iattr;
         const Imf::V2fAttribute *v2fattr;
         const Imf::V2iAttribute *v2iattr;
+#if 0
         const Imf::Box2iAttribute *b2iattr;
         const Imf::Box2fAttribute *b2fattr;
+#endif
         const Imf::TimeCodeAttribute *tattr;
         const Imf::KeyCodeAttribute *kcattr;
 #ifdef USE_OPENEXR_VERSION2
@@ -615,6 +617,7 @@ OpenEXRInput::PartInfo::parse_header (const Imf::Header *header)
             spec.attribute(oname, sv, &ustrvec[0]);
         }
 #endif
+#if 0
         else if (type == "box2i" &&
                  (b2iattr = header->findTypedAttribute<Imf::Box2iAttribute> (name))) {
             TypeDesc bx (TypeDesc::INT, TypeDesc::VEC2, 2);
@@ -625,6 +628,7 @@ OpenEXRInput::PartInfo::parse_header (const Imf::Header *header)
             TypeDesc bx (TypeDesc::FLOAT, TypeDesc::VEC2, 2);
             spec.attribute (oname, bx, &b2fattr->value());
         }
+#endif
         else if (type == "timecode" &&
                  (tattr = header->findTypedAttribute<Imf::TimeCodeAttribute> (name))) {
             unsigned int timecode[2];

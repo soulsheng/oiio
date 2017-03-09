@@ -298,6 +298,111 @@ ImageBufAlgo::sub (ImageBuf &dst, const ImageBuf &A, float b,
 }
 
 
+template<class Rtype, class Atype, class Btype>
+static bool
+	absdiff_impl (ImageBuf &R, const ImageBuf &A, const ImageBuf &B,
+	ROI roi, int nthreads)
+{
+	if (nthreads != 1 && roi.npixels() >= 1000) {
+		// Possible multiple thread case -- recurse via parallel_image
+		ImageBufAlgo::parallel_image (
+			boost::bind(absdiff_impl<Rtype,Atype,Btype>,
+			boost::ref(R), boost::cref(A), boost::cref(B),
+			_1 /*roi*/, 1 /*nthreads*/),
+			roi, nthreads);
+		return true;
+	}
+
+	// Serial case
+	ImageBuf::Iterator<Rtype> r (R, roi);
+	ImageBuf::ConstIterator<Atype> a (A, roi);
+	ImageBuf::ConstIterator<Btype> b (B, roi);
+	for ( ;  !r.done();  ++r, ++a, ++b)
+		for (int c = roi.chbegin;  c < roi.chend;  ++c)
+			r[c] = std::abs (a[c] - b[c]);
+	return true;
+}
+
+
+template<class Rtype, class Atype>
+static bool
+	absdiff_impl (ImageBuf &R, const ImageBuf &A, const float *b,
+	ROI roi, int nthreads)
+{
+	if (nthreads != 1 && roi.npixels() >= 1000) {
+		// Possible multiple thread case -- recurse via parallel_image
+		ImageBufAlgo::parallel_image (
+			boost::bind(absdiff_impl<Rtype,Atype>,
+			boost::ref(R), boost::cref(A), b,
+			_1 /*roi*/, 1 /*nthreads*/),
+			roi, nthreads);
+		return true;
+	}
+
+	// Serial case
+	ImageBuf::Iterator<Rtype> r (R, roi);
+	ImageBuf::ConstIterator<Atype> a (A, roi);
+	for ( ;  !r.done();  ++r, ++a)
+		for (int c = roi.chbegin;  c < roi.chend;  ++c)
+			r[c] = std::abs (a[c] - b[c]);
+	return true;
+}
+
+
+
+
+bool
+	ImageBufAlgo::absdiff (ImageBuf &dst, const ImageBuf &A, const ImageBuf &B,
+	ROI roi, int nthreads)
+{
+	if (! IBAprep (roi, &dst, &A, &B))
+		return false;
+	bool ok;
+	OIIO_DISPATCH_COMMON_TYPES3 (ok, "absdiff", absdiff_impl, dst.spec().format,
+		A.spec().format, B.spec().format,
+		dst, A, B, roi, nthreads);
+	return ok;
+}
+
+
+
+bool
+	ImageBufAlgo::absdiff (ImageBuf &dst, const ImageBuf &A, const float *b,
+	ROI roi, int nthreads)
+{
+	if (! IBAprep (roi, &dst, &A))
+		return false;
+	bool ok;
+	OIIO_DISPATCH_TYPES2 (ok, "absdiff", absdiff_impl, dst.spec().format,
+		A.spec().format, dst, A, b, roi, nthreads);
+	return ok;
+}
+
+
+
+bool
+	ImageBufAlgo::absdiff (ImageBuf &dst, const ImageBuf &A, float b,
+	ROI roi, int nthreads)
+{
+	if (! IBAprep (roi, &dst, &A))
+		return false;
+	int nc = A.nchannels();
+	float *vals = ALLOCA (float, nc);
+	for (int c = 0;  c < nc;  ++c)
+		vals[c] = b;
+	bool ok;
+	OIIO_DISPATCH_TYPES2 (ok, "absdiff", absdiff_impl, dst.spec().format,
+		A.spec().format, dst, A, vals, roi, nthreads);
+	return ok;
+}
+
+bool
+	ImageBufAlgo::abs (ImageBuf &dst, const ImageBuf &A, ROI roi, int nthreads)
+{
+	// Define abs in terms of absdiff(A,0.0)
+	return absdiff (dst, A, 0.0f, roi, nthreads);
+}
+
 
 template<class Rtype, class Atype, class Btype>
 static bool
