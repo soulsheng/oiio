@@ -67,7 +67,7 @@ struct ROI {
 
     /// Default constructor is an undefined region.
     ///
-    ROI () : xbegin(std::numeric_limits<int>::min()), xend(0),
+    ROI () : xbegin((std::numeric_limits<int>::min)()), xend(0),
              ybegin(0), yend(0), zbegin(0), zend(0), chbegin(0), chend(0)
     { }
 
@@ -80,7 +80,7 @@ struct ROI {
     { }
 
     /// Is a region defined?
-    bool defined () const { return (xbegin != std::numeric_limits<int>::min()); }
+    bool defined () const { return (xbegin != (std::numeric_limits<int>::min)()); }
 
     // Region dimensions.
     int width () const { return xend - xbegin; }

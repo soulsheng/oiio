@@ -83,7 +83,7 @@ typedef unsigned long long imagesize_t;
 
 /// Special value to indicate a stride length that should be
 /// auto-computed.
-const stride_t AutoStride = std::numeric_limits<stride_t>::min();
+const stride_t AutoStride = (std::numeric_limits<stride_t>::min)();
 
 
 
@@ -227,7 +227,7 @@ public:
     /// to allocate and read all at once, so client apps beware and check
     /// these routines for overflows!
     bool size_t_safe() const {
-        const imagesize_t big = std::numeric_limits<size_t>::max();
+        const imagesize_t big = (std::numeric_limits<size_t>::max)();
         return image_bytes() < big && scanline_bytes() < big &&
             tile_bytes() < big;
     }

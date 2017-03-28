@@ -510,8 +510,8 @@ bool OIIO_API clamp (ImageBuf &dst, const ImageBuf &src,
 /// Return true on success, false on error (with an appropriate error
 /// message set in dst).
 bool OIIO_API clamp (ImageBuf &dst, const ImageBuf &src,
-                     float min=-std::numeric_limits<float>::max(),
-                     float max=std::numeric_limits<float>::max(),
+                     float min=-(std::numeric_limits<float>::max)(),
+                     float max=(std::numeric_limits<float>::max)(),
                      bool clampalpha01 = false,
                      ROI roi = ROI::All(), int nthreads = 0);
 

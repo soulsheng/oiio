@@ -158,7 +158,7 @@ round_to_multiple_of_pow2 (T x, T m)
 inline uint32_t
 clamped_mult32 (uint32_t a, uint32_t b)
 {
-    const uint32_t Err = std::numeric_limits<uint32_t>::max();
+    const uint32_t Err = (std::numeric_limits<uint32_t>::max)();
     uint64_t r = (uint64_t)a * (uint64_t)b;   // Multiply into a bigger int
     return r < Err ? (uint32_t)r : Err;
 }
@@ -172,7 +172,7 @@ clamped_mult64 (uint64_t a, uint64_t b)
 {
     uint64_t ab = a*b;
     if (b && ab/b != a)
-        return std::numeric_limits<uint64_t>::max();
+        return (std::numeric_limits<uint64_t>::max)();
     else
         return ab;
 }
@@ -518,8 +518,8 @@ scaled_conversion (const S &src, F scale, F min, F max)
 // few possible src values (like unsigned char -> float).
 template<typename S, typename D>
 void convert_type (const S *src, D *dst, size_t n, D _zero=0, D _one=1,
-                   D _min=std::numeric_limits<D>::min(),
-                   D _max=std::numeric_limits<D>::max())
+                   D _min=(std::numeric_limits<D>::min)(),
+                   D _max=(std::numeric_limits<D>::max)())
 {
     if (is_same<S,D>::value) {
         // They must be the same type.  Just memcpy.
@@ -528,11 +528,11 @@ void convert_type (const S *src, D *dst, size_t n, D _zero=0, D _one=1,
     }
     typedef double F;
     F scale = std::numeric_limits<S>::is_integer ?
-        ((F)1.0)/std::numeric_limits<S>::max() : (F)1.0;
+        ((F)1.0)/(std::numeric_limits<S>::max)() : (F)1.0;
     if (std::numeric_limits<D>::is_integer) {
         // Converting to an integer-like type.
-        F min = (F)_min;  // std::numeric_limits<D>::min();
-        F max = (F)_max;  // std::numeric_limits<D>::max();
+        F min = (F)_min;  // (std::numeric_limits<D>::min)();
+        F max = (F)_max;  // (std::numeric_limits<D>::max)();
         scale *= _max;
         // Unroll loop for speed
         for ( ; n >= 16; n -= 16) {
@@ -599,12 +599,12 @@ convert_type (const S &src)
     }
     typedef double F;
     F scale = std::numeric_limits<S>::is_integer ?
-        ((F)1.0)/std::numeric_limits<S>::max() : (F)1.0;
+        ((F)1.0)/(std::numeric_limits<S>::max)() : (F)1.0;
     if (std::numeric_limits<D>::is_integer) {
         // Converting to an integer-like type.
         typedef double F;
-        F min = (F) std::numeric_limits<D>::min();
-        F max = (F) std::numeric_limits<D>::max();
+        F min = (F) (std::numeric_limits<D>::min)();
+        F max = (F) (std::numeric_limits<D>::max)();
         scale *= max;
         return scaled_conversion<S,D,F> (src, scale, min, max);
     } else {
@@ -732,7 +732,7 @@ private:
     void init () {
         float scale = 1.0f / 255.0f;
         if (std::numeric_limits<T>::is_integer)
-            scale *= (float)std::numeric_limits<T>::max();
+            scale *= (float)(std::numeric_limits<T>::max)();
         for (int i = 0;  i < 256;  ++i)
             val[i] = (T)(i * scale);
     }
@@ -834,8 +834,8 @@ inline T safe_acos (T x) {
 template <typename T>
 inline T safe_log2 (T x) {
     // match clamping from fast version
-    if (x < std::numeric_limits<T>::min()) x = std::numeric_limits<T>::min();
-    if (x > std::numeric_limits<T>::max()) x = std::numeric_limits<T>::max();
+    if (x < (std::numeric_limits<T>::min)()) x = (std::numeric_limits<T>::min)();
+    if (x > (std::numeric_limits<T>::max)()) x = (std::numeric_limits<T>::max)();
 #if defined(OIIO_CPLUSPLUS11)
     return std::log2(x);
 #else
@@ -847,8 +847,8 @@ inline T safe_log2 (T x) {
 template <typename T>
 inline T safe_log (T x) {
     // slightly different than fast version since clamping happens before scaling
-    if (x < std::numeric_limits<T>::min()) x = std::numeric_limits<T>::min();
-    if (x > std::numeric_limits<T>::max()) x = std::numeric_limits<T>::max();
+    if (x < (std::numeric_limits<T>::min)()) x = (std::numeric_limits<T>::min)();
+    if (x > (std::numeric_limits<T>::max)()) x = (std::numeric_limits<T>::max)();
     return std::log(x);
 }
 
@@ -856,8 +856,8 @@ inline T safe_log (T x) {
 template <typename T>
 inline T safe_log10 (T x) {
     // slightly different than fast version since clamping happens before scaling
-    if (x < std::numeric_limits<T>::min()) x = std::numeric_limits<T>::min();
-    if (x > std::numeric_limits<T>::max()) x = std::numeric_limits<T>::max();
+    if (x < (std::numeric_limits<T>::min)()) x = (std::numeric_limits<T>::min)();
+    if (x > (std::numeric_limits<T>::max)()) x = (std::numeric_limits<T>::max)();
     return log10f(x);
 }
 
@@ -865,9 +865,9 @@ inline T safe_log10 (T x) {
 template <typename T>
 inline T safe_logb (T x) {
 #if defined(OIIO_CPLUSPLUS11)
-    return (x != T(0)) ? std::logb(x) : -std::numeric_limits<T>::max();
+    return (x != T(0)) ? std::logb(x) : -(std::numeric_limits<T>::max)();
 #else
-    return (x != T(0)) ? logbf(x) : -std::numeric_limits<T>::max();
+    return (x != T(0)) ? logbf(x) : -(std::numeric_limits<T>::max)();
 #endif
 }
 
@@ -882,7 +882,7 @@ inline T safe_pow (T x, T y) {
     // FIXME: this does not match "fast" variant because clamping limits are different
     T r = std::pow(x, y);
     // Clamp to avoid returning Inf.
-    const T big = std::numeric_limits<T>::max();
+    const T big = (std::numeric_limits<T>::max)();
     return clamp (r, -big, big);
 }
 
@@ -1125,8 +1125,8 @@ inline float fast_atan2 (float y, float x) {
 
 static inline float fast_log2 (float x) {
     // NOTE: clamp to avoid special cases and make result "safe" from large negative values/nans
-    if (x < std::numeric_limits<float>::min()) x = std::numeric_limits<float>::min();
-    if (x > std::numeric_limits<float>::max()) x = std::numeric_limits<float>::max();
+    if (x < (std::numeric_limits<float>::min)()) x = (std::numeric_limits<float>::min)();
+    if (x > (std::numeric_limits<float>::max)()) x = (std::numeric_limits<float>::max)();
     // based on https://github.com/LiraNuna/glsl-sse2/blob/master/source/vec4.h
     unsigned bits = bit_cast<float, unsigned>(x);
     int exponent = int(bits >> 23) - 127;
@@ -1160,8 +1160,8 @@ inline float fast_log10 (float x) {
 inline float fast_logb (float x) {
     // don't bother with denormals
     x = fabsf(x);
-    if (x < std::numeric_limits<float>::min()) x = std::numeric_limits<float>::min();
-    if (x > std::numeric_limits<float>::max()) x = std::numeric_limits<float>::max();
+    if (x < (std::numeric_limits<float>::min)()) x = (std::numeric_limits<float>::min)();
+    if (x > (std::numeric_limits<float>::max)()) x = (std::numeric_limits<float>::max)();
     unsigned bits = bit_cast<float, unsigned>(x);
     return int(bits >> 23) - 127;
 }
@@ -1260,7 +1260,7 @@ inline float fast_safe_pow (float x, float y) {
     if (y == 1.0f)
         return x;
     if (y == 2.0f)
-        return std::min (x*x, std::numeric_limits<float>::max());
+        return (std::min) (x*x, (std::numeric_limits<float>::max)());
     float sign = 1.0f;
     if (x < 0) {
         // if x is negative, only deal with integer powers
