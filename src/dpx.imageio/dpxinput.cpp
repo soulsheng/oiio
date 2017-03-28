@@ -30,7 +30,9 @@
 
 #include "libdpx/DPX.h"
 #include "libdpx/DPXColorConverter.h"
+#if USE_OPENEXR
 #include <OpenEXR/ImfTimeCode.h> //For TimeCode support
+#endif
 
 #include "OpenImageIO/typedesc.h"
 #include "OpenImageIO/imageio.h"
@@ -88,7 +90,7 @@ private:
 
     /// Helper function - convert Imf::TimeCode to string;
     ///
-    std::string get_timecode_string (Imf::TimeCode &tc);
+    //std::string get_timecode_string (Imf::TimeCode &tc);
 };
 
 
@@ -477,6 +479,7 @@ DPXInput::seek_subimage (int subimage, int miplevel, ImageSpec &newspec)
         m_spec.attribute("smpte:KeyCode", TypeDesc::TypeKeyCode, kc);
     }
 
+#if USE_OPENEXR
     if (m_dpx.header.timeCode != 0xFFFFFFFF) {
 
         unsigned int timecode[2] = {m_dpx.header.timeCode, m_dpx.header.userBits};
@@ -487,6 +490,7 @@ DPXInput::seek_subimage (int subimage, int miplevel, ImageSpec &newspec)
         Imf::TimeCode tc(m_dpx.header.timeCode, m_dpx.header.userBits);
         m_spec.attribute ("dpx:TimeCode", get_timecode_string(tc));
     }
+#endif
 
     // This attribute is dpx specific and is left in for backwards compatability.
     // Users should utilise the new smpte:TimeCode attribute instead
@@ -789,6 +793,7 @@ DPXInput::get_keycode_values (int *array)
 
 
 
+#if USE_OPENEXR
 std::string
 DPXInput::get_timecode_string (Imf::TimeCode &tc)
 {
@@ -809,6 +814,7 @@ DPXInput::get_timecode_string (Imf::TimeCode &tc)
     }
     return ss.str();
 }
+#endif
 
 OIIO_PLUGIN_NAMESPACE_END
 

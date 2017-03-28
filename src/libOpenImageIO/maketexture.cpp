@@ -566,7 +566,7 @@ write_mipmap (ImageBufAlgo::MakeTextureMode mode,
                   << "\" format does not support multires images\n";
         return false;
     }
-
+#if USE_OPENEXR
     if (! mipmap && ! strcmp (out->format_name(), "openexr")) {
         // Send hint to OpenEXR driver that we won't specify a MIPmap
         outspec.attribute ("openexr:levelmode", 0 /* ONE_LEVEL */);
@@ -585,7 +585,7 @@ write_mipmap (ImageBufAlgo::MakeTextureMode mode,
     }
     if (envlatlmode && src_samples_border)
         fix_latl_edges (*img);
-
+#endif
     bool do_highlight_compensation = configspec.get_int_attribute ("maketx:highlightcomp", 0);
     float sharpen = configspec.get_float_attribute ("maketx:sharpen", 0.0f);
     string_view sharpenfilt = "gaussian";
@@ -740,7 +740,11 @@ write_mipmap (ImageBufAlgo::MakeTextureMode mode,
             stat_miptime += miptimer();
             outspec = smallspec;
             outspec.set_format (outputdatatype);
-            if (envlatlmode && src_samples_border)
+#if USE_OPENEXR
+			if (envlatlmode && src_samples_border)
+#else
+			if (envlatlmode)
+#endif
                 fix_latl_edges (*small);
 
             Timer writetimer;
@@ -1328,11 +1332,12 @@ make_texture_impl (ImageBufAlgo::MakeTextureMode mode,
         do_resize = true;
     // resize if we're converting from non-border sampling to border sampling
     // (converting TO an OpenEXR environment map).
+#if	USE_OPENEXR
     if (envlatlmode && 
         (Strutil::iequals(configspec.get_string_attribute("maketx:fileformatname"),"openexr") ||
          Strutil::iends_with(outputfilename,".exr")))
         do_resize = true;
-
+#endif
     if (do_resize && orig_was_overscan &&
         out && !out->supports("displaywindow")) {
         outstream << "maketx ERROR: format " << out->format_name()

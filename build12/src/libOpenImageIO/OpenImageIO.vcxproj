@@ -85,7 +85,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;D:\file\code\sdk\external\openexr-1.6.1\include;D:\file\code\sdk\external\openexr-1.6.1\include\OpenEXR;D:\file\code\sdk\boost_1_60_0-vc12;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build12\include\OpenImageIO;D:\file\code\sdk\oiio\build12\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;D:\file\code\sdk\external\openjpeg-1.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\boost_1_60_0-vc12;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build12\include\OpenImageIO;D:\file\code\sdk\oiio\build12\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;D:\file\code\sdk\external\openjpeg-1.3\include;D:\file\code\sdk\openexr\IlmBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -98,7 +98,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UndefinePreprocessorDefinitions>USE_FIELD3D</UndefinePreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;USE_OPENJPEG;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR="Debug";OpenImageIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;USE_OPENJPEG;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR="Debug";OpenImageIO_EXPORTS;USE_OPENEXR=0;USE_IEX=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
@@ -115,14 +115,17 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;boost_filesystem-vc120-mt-gd-1_60.lib;boost_regex-vc120-mt-gd-1_60.lib;boost_system-vc120-mt-gd-1_60.lib;boost_thread-vc120-mt-gd-1_60.lib;psapi.lib;D:\file\code\sdk\external\libpng-1.2.3\lib\libpng.lib;D:\file\code\sdk\external\zlib-1.2.3\lib\zdll.lib;D:\file\code\sdk\external\tiff-3.8.2\lib\libtiff.lib;D:\file\code\sdk\external\jpeg-6b\lib\jpeg.lib;D:\file\code\sdk\external\openjpeg-1.3\lib\OpenJPEG.lib;D:\file\code\sdk\external\openexr-1.6.1\lib\IlmImf.lib;Half.lib;Iex.lib;Imath.lib;IlmThread.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:/file/code/sdk/boost_1_60_0-vc12/lib32-msvc-12.0;D:/file/code/sdk/boost_1_60_0-vc12/lib32-msvc-12.0/$(Configuration);D:/file/code/sdk/external/ilmbase-1.0.1/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;boost_filesystem-vc120-mt-gd-1_60.lib;boost_regex-vc120-mt-gd-1_60.lib;boost_system-vc120-mt-gd-1_60.lib;boost_thread-vc120-mt-gd-1_60.lib;psapi.lib;D:\file\code\sdk\external\libpng-1.2.3\lib\libpng.lib;D:\file\code\sdk\external\zlib-1.2.3\lib\zdll.lib;D:\file\code\sdk\external\tiff-3.8.2\lib\libtiff.lib;D:\file\code\sdk\external\jpeg-6b\lib\jpeg.lib;D:\file\code\sdk\external\openjpeg-1.3\lib\OpenJPEG.lib;Half.lib;Iex-2_2.lib;Imath-2_2.lib;IlmThread-2_2.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/file/code/sdk/boost_1_60_0-vc12/lib32-msvc-12.0;D:/file/code/sdk/boost_1_60_0-vc12/lib32-msvc-12.0/$(Configuration);D:\file\code\sdk\openexr\IlmBase\lib12\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>D:/file/code/sdk/oiio/build12/src/libOpenImageIO/Debug/OpenImageIO.lib</ImportLibrary>
       <ProgramDataBaseFile>D:/file/code/sdk/oiio/build12/src/libOpenImageIO/Debug/OpenImageIO.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
       <Version>
       </Version>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>MSVCRT.lib;LIBCMT.lib</IgnoreSpecificDefaultLibraries>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -130,7 +133,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;D:\file\code\sdk\external\openexr-1.6.1\include;D:\file\code\sdk\external\openexr-1.6.1\include\OpenEXR;D:\file\code\sdk\boost_1_60_0-vc12;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build12\include\OpenImageIO;D:\file\code\sdk\oiio\build12\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;D:\file\code\sdk\external\openjpeg-1.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\openexr\IlmBase\include\OpenEXR;D:\file\code\sdk\openexr\IlmBase\include;D:\file\code\sdk\boost_1_60_0-vc12;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build12\include\OpenImageIO;D:\file\code\sdk\oiio\build12\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;D:\file\code\sdk\external\openjpeg-1.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -143,7 +146,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>
       </DebugInformationFormat>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;USE_OPENJPEG;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR="Release";OpenImageIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;USE_OPENJPEG;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR="Release";OpenImageIO_EXPORTS;USE_OPENEXR=0;USE_IEX=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
@@ -160,8 +163,8 @@
     </Midl>
     <Link>
       <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;D:\file\code\sdk\boost_1_60_0-vc12\lib32-msvc-12.0\boost_filesystem-vc120-mt-1_60.lib;D:\file\code\sdk\boost_1_60_0-vc12\lib32-msvc-12.0\boost_regex-vc120-mt-1_60.lib;D:\file\code\sdk\boost_1_60_0-vc12\lib32-msvc-12.0\boost_system-vc120-mt-1_60.lib;D:\file\code\sdk\boost_1_60_0-vc12\lib32-msvc-12.0\boost_thread-vc120-mt-1_60.lib;psapi.lib;D:\file\code\sdk\external\libpng-1.2.3\lib\libpng.lib;D:\file\code\sdk\external\zlib-1.2.3\lib\zdll.lib;D:\file\code\sdk\external\tiff-3.8.2\lib\libtiff.lib;D:\file\code\sdk\external\jpeg-6b\lib\jpeg.lib;D:\file\code\sdk\external\zlib-1.2.3\lib\zdll.lib;D:\file\code\sdk\external\openjpeg-1.3\lib\OpenJPEG.lib;IlmImf.lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\Half.lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\lex.lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\Imath.lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\IlmThread.lib;D:\file\code\sdk\external\tiff-3.8.2\lib\libtiff.lib;D:\file\code\sdk\external\jpeg-6b\lib\jpeg.lib;D:\file\code\sdk\external\openjpeg-1.3\lib\OpenJPEG.lib;IlmImf.lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\Half.lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\lex.lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\Imath.lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\IlmThread.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:/file/code/sdk/boost_1_60_0-vc12/lib32-msvc-12.0;D:/file/code/sdk/boost_1_60_0-vc12/lib32-msvc-12.0/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;boost_filesystem-vc120-mt-1_60.lib;boost_regex-vc120-mt-1_60.lib;boost_system-vc120-mt-1_60.lib;boost_thread-vc120-mt-1_60.lib;psapi.lib;D:\file\code\sdk\external\libpng-1.2.3\lib\libpng.lib;D:\file\code\sdk\external\zlib-1.2.3\lib\zdll.lib;D:\file\code\sdk\external\tiff-3.8.2\lib\libtiff.lib;D:\file\code\sdk\external\jpeg-6b\lib\jpeg.lib;D:\file\code\sdk\external\openjpeg-1.3\lib\OpenJPEG.lib;Half.lib;Iex-2_2.lib;Imath-2_2.lib;IlmThread-2_2.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:/file/code/sdk/boost_1_60_0-vc12/lib32-msvc-12.0;D:/file/code/sdk/boost_1_60_0-vc12/lib32-msvc-12.0/$(Configuration);D:\file\code\sdk\openexr\IlmBase\lib12\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <ImportLibrary>D:/file/code/sdk/oiio/build12/src/libOpenImageIO/Release/OpenImageIO.lib</ImportLibrary>
       <ProgramDataBaseFile>D:/file/code/sdk/oiio/build12/src/libOpenImageIO/Release/OpenImageIO.pdb</ProgramDataBaseFile>
@@ -262,62 +265,6 @@
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <CustomBuild Include="..\..\..\src\libOpenImageIO\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build12 --check-stamp-file D:\file\code\sdk\oiio\build12\src\libOpenImageIO\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\imageio_pvt.h.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindJPEG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\sdk\oiio\build12\src\libOpenImageIO\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build12 --check-stamp-file D:\file\code\sdk\oiio\build12\src\libOpenImageIO\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\imageio_pvt.h.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindJPEG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\sdk\oiio\build12\src\libOpenImageIO\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build12 --check-stamp-file D:\file\code\sdk\oiio\build12\src\libOpenImageIO\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\imageio_pvt.h.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindJPEG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\file\code\sdk\oiio\build12\src\libOpenImageIO\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build12 --check-stamp-file D:\file\code\sdk\oiio\build12\src\libOpenImageIO\CMakeFiles\generate.stamp
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\imageio_pvt.h.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindJPEG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\file\code\sdk\oiio\build12\src\libOpenImageIO\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\include\OpenImageIO\argparse.h" />
     <ClInclude Include="..\..\..\src\include\OpenImageIO\array_view.h" />
@@ -488,8 +435,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexTriangleKernel.cpp" />
     <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexUtils.cpp" />
     <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexWriter.cpp" />
-    <ClCompile Include="..\..\..\src\openexr.imageio\exrinput.cpp" />
-    <ClCompile Include="..\..\..\src\openexr.imageio\exroutput.cpp" />
     <ClCompile Include="..\..\..\src\rla.imageio\rlainput.cpp" />
     <ClCompile Include="..\..\..\src\rla.imageio\rlaoutput.cpp" />
     <ClCompile Include="..\..\..\src\sgi.imageio\sgiinput.cpp" />
@@ -507,11 +452,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="..\..\..\src\socket.imageio\socket_pvt.cpp" />
     <ClCompile Include="..\..\..\src\jpeg2000.imageio\jpeg2000input.cpp" />
     <ClCompile Include="..\..\..\src\jpeg2000.imageio\jpeg2000output.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="D:/file/code/sdk/oiio/build12/ZERO_CHECK.vcxproj">
-      <Project>F2B72E9B-637D-4B90-99BC-D5B0005BE03B</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
