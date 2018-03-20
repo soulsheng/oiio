@@ -364,12 +364,6 @@
     <ClCompile Include="..\..\..\src\socket.imageio\socket_pvt.cpp">
       <Filter>Plugins\socket</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\jpeg2000.imageio\jpeg2000input.cpp">
-      <Filter>Plugins\jpeg2000</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\src\jpeg2000.imageio\jpeg2000output.cpp">
-      <Filter>Plugins\jpeg2000</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\include\OpenImageIO\argparse.h">
@@ -580,9 +574,6 @@
     </Filter>
     <Filter Include="Plugins\socket">
       <UniqueIdentifier>{DCF3229F-0CEE-4B5C-A482-C78E92B058CC}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Plugins\jpeg2000">
-      <UniqueIdentifier>{F8755E35-97C4-45DF-AD83-B4F45A01FBAE}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -131,3 +131,5 @@ testsuite/runtest.pyc
 /build/src/maketx/*.dir
 /build/src/oiiotool/*.dir
 /build/src/testtex/*.dir
+/build12/src/libOpenImageIO/x64
+/build12/x64

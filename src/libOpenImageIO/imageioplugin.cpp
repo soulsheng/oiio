@@ -219,7 +219,9 @@ catalog_plugin (const std::string &format_name,
     PLUGENTRY (ico);
     PLUGENTRY (iff);
     PLUGENTRY (jpeg);
-    PLUGENTRY (jpeg2000);
+#if	USE_OPENJPEG
+	PLUGENTRY (jpeg2000);
+#endif
 #if	USE_OPENEXR
 	PLUGENTRY (openexr);
 #endif
