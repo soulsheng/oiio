@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{75BE8A99-3BF6-487B-AB75-B28CBB69CB73}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>NightlyMemoryCheck</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/file/code/sdk/oiio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build --check-stamp-file D:\file\code\sdk\oiio\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/sdk/oiio/CMakeLists.txt;D:\file\code\sdk\oiio\CMakeLists.txt;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\file\code\sdk\oiio\src\cmake\util_macros.cmake;D:\file\code\sdk\oiio\src\cmake\oiio_macros.cmake;D:\file\code\sdk\oiio\src\cmake\platform.cmake;D:\file\code\sdk\oiio\src\cmake\externalpackages.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindIlmBase.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\file\code\sdk\oiio\src\cmake\modules\SelectLibraryConfigurations.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenEXR.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\boost-1.49.0\cmake\BoostConfigVersion.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenColorIO.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindFFmpeg.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenJpeg.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindLibRaw.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindFreetype.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindGIF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTest.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTestUseLaunchers.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTestTargets.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\DartConfiguration.tcl.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;D:\file\code\sdk\oiio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\sdk\oiio\build\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/file/code/sdk/oiio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build --check-stamp-file D:\file\code\sdk\oiio\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/sdk/oiio/CMakeLists.txt;D:\file\code\sdk\oiio\CMakeLists.txt;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\file\code\sdk\oiio\src\cmake\util_macros.cmake;D:\file\code\sdk\oiio\src\cmake\oiio_macros.cmake;D:\file\code\sdk\oiio\src\cmake\platform.cmake;D:\file\code\sdk\oiio\src\cmake\externalpackages.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindIlmBase.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\file\code\sdk\oiio\src\cmake\modules\SelectLibraryConfigurations.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenEXR.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\boost-1.49.0\cmake\BoostConfigVersion.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenColorIO.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindFFmpeg.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenJpeg.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindLibRaw.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindFreetype.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindGIF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTest.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTestUseLaunchers.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTestTargets.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\DartConfiguration.tcl.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;D:\file\code\sdk\oiio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\sdk\oiio\build\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/file/code/sdk/oiio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build --check-stamp-file D:\file\code\sdk\oiio\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/file/code/sdk/oiio/CMakeLists.txt;D:\file\code\sdk\oiio\CMakeLists.txt;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\file\code\sdk\oiio\src\cmake\util_macros.cmake;D:\file\code\sdk\oiio\src\cmake\oiio_macros.cmake;D:\file\code\sdk\oiio\src\cmake\platform.cmake;D:\file\code\sdk\oiio\src\cmake\externalpackages.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindIlmBase.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\file\code\sdk\oiio\src\cmake\modules\SelectLibraryConfigurations.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenEXR.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\boost-1.49.0\cmake\BoostConfigVersion.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenColorIO.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindFFmpeg.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenJpeg.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindLibRaw.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindFreetype.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindGIF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTest.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTestUseLaunchers.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTestTargets.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\DartConfiguration.tcl.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;D:\file\code\sdk\oiio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\file\code\sdk\oiio\build\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/file/code/sdk/oiio/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build --check-stamp-file D:\file\code\sdk\oiio\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/file/code/sdk/oiio/CMakeLists.txt;D:\file\code\sdk\oiio\CMakeLists.txt;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeSystem.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeCCompiler.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeCXXCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;D:\file\code\sdk\oiio\build\CMakeFiles\2.8.12.2\CMakeRCCompiler.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;D:\file\code\sdk\oiio\src\cmake\util_macros.cmake;D:\file\code\sdk\oiio\src\cmake\oiio_macros.cmake;D:\file\code\sdk\oiio\src\cmake\platform.cmake;D:\file\code\sdk\oiio\src\cmake\externalpackages.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindIlmBase.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\file\code\sdk\oiio\src\cmake\modules\SelectLibraryConfigurations.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenEXR.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\share\boost-1.49.0\cmake\BoostConfigVersion.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindOpenGL.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenColorIO.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\Qt4Macros.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindFFmpeg.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindOpenJpeg.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindLibRaw.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPkgConfig.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindFreetype.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindGIF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTest.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTestUseLaunchers.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CTestTargets.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\DartConfiguration.tcl.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPack.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CPackComponent.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Templates\CPackConfig.cmake.in;D:\file\code\sdk\oiio\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\file\code\sdk\oiio\build\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\f938d000d55058aecc77ba1299aa8149\NightlyMemoryCheck.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\ctest.exe" -C $(Configuration) -D NightlyMemoryCheck
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/sdk/oiio/build/CMakeFiles/f938d000d55058aecc77ba1299aa8149/NightlyMemoryCheck.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\sdk\oiio\build\CMakeFiles\NightlyMemoryCheck</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\ctest.exe" -C $(Configuration) -D NightlyMemoryCheck
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/sdk/oiio/build/CMakeFiles/f938d000d55058aecc77ba1299aa8149/NightlyMemoryCheck.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\sdk\oiio\build\CMakeFiles\NightlyMemoryCheck</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\ctest.exe" -C $(Configuration) -D NightlyMemoryCheck
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/file/code/sdk/oiio/build/CMakeFiles/f938d000d55058aecc77ba1299aa8149/NightlyMemoryCheck.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\file\code\sdk\oiio\build\CMakeFiles\NightlyMemoryCheck</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\ctest.exe" -C $(Configuration) -D NightlyMemoryCheck
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/file/code/sdk/oiio/build/CMakeFiles/f938d000d55058aecc77ba1299aa8149/NightlyMemoryCheck.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\file\code\sdk\oiio\build\CMakeFiles\NightlyMemoryCheck</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\NightlyMemoryCheck" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/file/code/sdk/oiio/build/ZERO_CHECK.vcxproj">
+      <Project>3E4D9875-2898-4453-B032-A922FB6E8B57</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

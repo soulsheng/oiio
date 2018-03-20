@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="..\CMakeLists.txt" />
+    <CustomBuild Include="..\testsuite\runtest.py" />
+    <CustomBuild Include="CMakeFiles\f938d000d55058aecc77ba1299aa8149\CopyFiles.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMakeFiles\CopyFiles" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{59B3C94F-545C-4637-815F-B44893F85F59}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

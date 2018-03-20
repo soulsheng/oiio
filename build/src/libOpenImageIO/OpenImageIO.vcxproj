@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{06070B81-4971-42A9-ABAA-2FB177C8BA69}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>OpenImageIO</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\sdk\oiio\build\src\libOpenImageIO\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">OpenImageIO.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">OpenImageIO</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\sdk\oiio\build\src\libOpenImageIO\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">OpenImageIO.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">OpenImageIO</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\file\code\sdk\oiio\build\src\libOpenImageIO\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">OpenImageIO.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">OpenImageIO</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\file\code\sdk\oiio\build\src\libOpenImageIO\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">OpenImageIO.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">OpenImageIO</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\openexr-1.6.1\include;D:\file\code\sdk\external\openexr-1.6.1\include\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UndefinePreprocessorDefinitions>USE_FIELD3D</UndefinePreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;OIIO_NO_SSE=1;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR="Debug";OpenImageIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;OIIO_NO_SSE=1;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR=\"Debug\";OpenImageIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug psapi.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_filesystem-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_regex-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_system-vc100-mt-gd-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_thread-vc100-mt-gd-1_49.lib;psapi.lib;$(THIRD_PARTY_TOOLS_HOME)\jasper-1.900.1\lib\libjasper.lib;$(THIRD_PARTY_TOOLS_HOME)\jpeg-6b\lib\jpeg.lib;$(THIRD_PARTY_TOOLS_HOME)\libpng-1.2.3\lib\libpng.lib;$(THIRD_PARTY_TOOLS_HOME)\openexr-1.6.1\lib\IlmImf.lib;$(THIRD_PARTY_TOOLS_HOME)\openjpeg-1.3\lib\OpenJPEG.lib;$(THIRD_PARTY_TOOLS_HOME)\tiff-3.8.2\lib\libtiff.lib;$(THIRD_PARTY_TOOLS_HOME)\zlib-1.2.3\lib\zdll.lib;$(THIRD_PARTY_TOOLS_HOME)\ilmbase-1.0.1\lib\Half.lib;$(THIRD_PARTY_TOOLS_HOME)\ilmbase-1.0.1\lib\Iex.lib;$(THIRD_PARTY_TOOLS_HOME)\ilmbase-1.0.1\lib\IlmThread.lib;$(THIRD_PARTY_TOOLS_HOME)\ilmbase-1.0.1\lib\Imath.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>D:/file/code/sdk/oiio/build/src/libOpenImageIO/Debug/OpenImageIO.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/file/code/sdk/oiio/build/src/libOpenImageIO/Debug/OpenImageIO.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UndefinePreprocessorDefinitions>USE_FIELD3D</UndefinePreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OIIO_NO_SSE=1;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR="Release";OpenImageIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OIIO_NO_SSE=1;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR=\"Release\";OpenImageIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 psapi.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_filesystem-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_regex-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_system-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_thread-vc100-mt-1_49.lib;psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>D:/file/code/sdk/oiio/build/src/libOpenImageIO/Release/OpenImageIO.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/file/code/sdk/oiio/build/src/libOpenImageIO/Release/OpenImageIO.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UndefinePreprocessorDefinitions>USE_FIELD3D</UndefinePreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OIIO_NO_SSE=1;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR="MinSizeRel";OpenImageIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OIIO_NO_SSE=1;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR=\"MinSizeRel\";OpenImageIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 psapi.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_filesystem-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_regex-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_system-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_thread-vc100-mt-1_49.lib;psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ImportLibrary>D:/file/code/sdk/oiio/build/src/libOpenImageIO/MinSizeRel/OpenImageIO.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/file/code/sdk/oiio/build/src/libOpenImageIO/MinSizeRel/OpenImageIO.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UndefinePreprocessorDefinitions>USE_FIELD3D</UndefinePreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OIIO_NO_SSE=1;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR="RelWithDebInfo";OpenImageIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OIIO_NO_SSE=1;_CRT_SECURE_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;JAS_WIN_MSVC_BUILD;BOOST_ALL_DYN_LINK;OPENEXR_DLL;USE_BOOST_ASIO=1;EMBED_PLUGINS=1;BOOST_TEST_DYN_LINK;PTEX_EXPORTS;CMAKE_INTDIR=\"RelWithDebInfo\";OpenImageIO_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\file\code\sdk\external\ilmbase-1.0.1\lib;D:\file\code\sdk\external\ilmbase-1.0.1\lib\OpenEXR;D:\file\code\sdk\external\ilmbase-1.0.1\include;D:\file\code\sdk\external\ilmbase-1.0.1\include\OpenEXR;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\include;D:\file\code\sdk\oiio\src\include;D:\file\code\sdk\oiio\build\include\OpenImageIO;D:\file\code\sdk\oiio\build\src\libOpenImageIO;D:\file\code\sdk\external\libpng-1.2.3\include;D:\file\code\sdk\external\zlib-1.2.3\include;D:\file\code\sdk\external\jpeg-6b\include;D:\file\code\sdk\external\tiff-3.8.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug psapi.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_filesystem-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_regex-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_system-vc100-mt-1_49.lib;C:\Program Files (x86)\PCL 1.6.0\3rdParty\Boost\lib\boost_thread-vc100-mt-1_49.lib;psapi.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib;C:/Program Files (x86)/PCL 1.6.0/3rdParty/Boost/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>D:/file/code/sdk/oiio/build/src/libOpenImageIO/RelWithDebInfo/OpenImageIO.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/file/code/sdk/oiio/build/src/libOpenImageIO/RelWithDebInfo/OpenImageIO.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version>
+      </Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\src\libOpenImageIO\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build --check-stamp-file D:\file\code\sdk\oiio\build\src\libOpenImageIO\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\imageio_pvt.h.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindJPEG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\file\code\sdk\oiio\build\src\libOpenImageIO\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build --check-stamp-file D:\file\code\sdk\oiio\build\src\libOpenImageIO\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\imageio_pvt.h.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindJPEG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\file\code\sdk\oiio\build\src\libOpenImageIO\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build --check-stamp-file D:\file\code\sdk\oiio\build\src\libOpenImageIO\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\imageio_pvt.h.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindJPEG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\file\code\sdk\oiio\build\src\libOpenImageIO\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake 2.8\bin\cmake.exe" -HD:/file/code/sdk/oiio -BD:/file/code/sdk/oiio/build --check-stamp-file D:\file\code\sdk\oiio\build\src\libOpenImageIO\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/file/code/sdk/oiio/src/libOpenImageIO/CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;D:\file\code\sdk\oiio\src\libOpenImageIO\imageio_pvt.h.in;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPNG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\SelectLibraryConfigurations.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\cmake\modules\FindJPEG.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindTIFF.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;D:\file\code\sdk\oiio\src\libOpenImageIO\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\file\code\sdk\oiio\build\src\libOpenImageIO\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\argparse.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\array_view.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\color.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\dassert.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\errorhandler.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\export.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\filesystem.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\filter.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\fmath.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\hash.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\imagebuf.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\imagebufalgo.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\imagebufalgo_util.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\imagecache.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\imageio.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\image_view.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\missing_math.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\optparser.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\osdep.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\paramlist.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\platform.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\plugin.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\refcnt.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\SHA1.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\simd.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\strided_ptr.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\string_ref.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\string_view.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\strutil.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\sysutil.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\texture.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\thread.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\timer.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\tinyformat.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\typedesc.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\unittest.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\unordered_map_concurrent.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\ustring.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\varyingref.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\version.h" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\pugiconfig.hpp" />
+    <ClInclude Include="..\..\..\src\include\OpenImageIO\pugixml.hpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\exif.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\formatspec.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imagebuf.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imageinput.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imageio.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imageioplugin.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imageoutput.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\iptc.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\xmp.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\color_ocio.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imagebufalgo.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imagebufalgo_compare.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imagebufalgo_copy.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imagebufalgo_deep.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imagebufalgo_draw.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imagebufalgo_pixelmath.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imagebufalgo_xform.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imagebufalgo_yee.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\imagebufalgo_opencv.cpp" />
+    <ClCompile Include="..\..\..\src\libOpenImageIO\maketexture.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\argparse.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\errorhandler.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\filesystem.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\filter.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\hashes.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\paramlist.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\plugin.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\SHA1.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\strutil.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\sysutil.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\timer.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\typedesc.cpp" />
+    <ClCompile Include="..\..\..\src\libutil\ustring.cpp" />
+    <ClCompile Include="..\..\..\src\libtexture\texturesys.cpp" />
+    <ClCompile Include="..\..\..\src\libtexture\texture3d.cpp" />
+    <ClCompile Include="..\..\..\src\libtexture\environment.cpp" />
+    <ClCompile Include="..\..\..\src\libtexture\texoptions.cpp" />
+    <ClCompile Include="..\..\..\src\libtexture\imagecache.cpp" />
+    <ClCompile Include="..\..\..\src\include\OpenImageIO\pugixml.cpp" />
+    <ClCompile Include="..\..\..\src\bmp.imageio\bmpinput.cpp" />
+    <ClCompile Include="..\..\..\src\bmp.imageio\bmpoutput.cpp" />
+    <ClCompile Include="..\..\..\src\bmp.imageio\bmp_pvt.cpp" />
+    <ClCompile Include="..\..\..\src\cineon.imageio\cineoninput.cpp" />
+    <ClCompile Include="..\..\..\src\cineon.imageio\cineonoutput.cpp" />
+    <ClCompile Include="..\..\..\src\cineon.imageio\libcineon\Cineon.cpp" />
+    <ClCompile Include="..\..\..\src\cineon.imageio\libcineon\Codec.cpp">
+      <ObjectFileName>$(IntDir)/__/cineon.imageio/libcineon/Codec.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\cineon.imageio\libcineon\Reader.cpp">
+      <ObjectFileName>$(IntDir)/__/cineon.imageio/libcineon/Reader.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\cineon.imageio\libcineon\Writer.cpp">
+      <ObjectFileName>$(IntDir)/__/cineon.imageio/libcineon/Writer.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\cineon.imageio\libcineon\CineonHeader.cpp" />
+    <ClCompile Include="..\..\..\src\cineon.imageio\libcineon\ElementReadStream.cpp">
+      <ObjectFileName>$(IntDir)/__/cineon.imageio/libcineon/ElementReadStream.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\cineon.imageio\libcineon\InStream.cpp">
+      <ObjectFileName>$(IntDir)/__/cineon.imageio/libcineon/InStream.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dds.imageio\ddsinput.cpp" />
+    <ClCompile Include="..\..\..\src\dds.imageio\ddsoutput.cpp" />
+    <ClCompile Include="..\..\..\src\dds.imageio\squish\alpha.cpp" />
+    <ClCompile Include="..\..\..\src\dds.imageio\squish\clusterfit.cpp" />
+    <ClCompile Include="..\..\..\src\dds.imageio\squish\colourblock.cpp" />
+    <ClCompile Include="..\..\..\src\dds.imageio\squish\colourfit.cpp" />
+    <ClCompile Include="..\..\..\src\dds.imageio\squish\colourset.cpp" />
+    <ClCompile Include="..\..\..\src\dds.imageio\squish\maths.cpp" />
+    <ClCompile Include="..\..\..\src\dds.imageio\squish\rangefit.cpp" />
+    <ClCompile Include="..\..\..\src\dds.imageio\squish\singlecolourfit.cpp" />
+    <ClCompile Include="..\..\..\src\dds.imageio\squish\squish.cpp" />
+    <ClCompile Include="..\..\..\src\dpx.imageio\dpxinput.cpp" />
+    <ClCompile Include="..\..\..\src\dpx.imageio\dpxoutput.cpp" />
+    <ClCompile Include="..\..\..\src\dpx.imageio\libdpx\DPX.cpp" />
+    <ClCompile Include="..\..\..\src\dpx.imageio\libdpx\OutStream.cpp" />
+    <ClCompile Include="..\..\..\src\dpx.imageio\libdpx\RunLengthEncoding.cpp" />
+    <ClCompile Include="..\..\..\src\dpx.imageio\libdpx\Codec.cpp">
+      <ObjectFileName>$(IntDir)/__/dpx.imageio/libdpx/Codec.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dpx.imageio\libdpx\Reader.cpp">
+      <ObjectFileName>$(IntDir)/__/dpx.imageio/libdpx/Reader.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dpx.imageio\libdpx\Writer.cpp">
+      <ObjectFileName>$(IntDir)/__/dpx.imageio/libdpx/Writer.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dpx.imageio\libdpx\DPXHeader.cpp" />
+    <ClCompile Include="..\..\..\src\dpx.imageio\libdpx\ElementReadStream.cpp">
+      <ObjectFileName>$(IntDir)/__/dpx.imageio/libdpx/ElementReadStream.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dpx.imageio\libdpx\InStream.cpp">
+      <ObjectFileName>$(IntDir)/__/dpx.imageio/libdpx/InStream.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\dpx.imageio\libdpx\DPXColorConverter.cpp" />
+    <ClCompile Include="..\..\..\src\fits.imageio\fitsinput.cpp" />
+    <ClCompile Include="..\..\..\src\fits.imageio\fitsoutput.cpp" />
+    <ClCompile Include="..\..\..\src\fits.imageio\fits_pvt.cpp" />
+    <ClCompile Include="..\..\..\src\hdr.imageio\hdrinput.cpp" />
+    <ClCompile Include="..\..\..\src\hdr.imageio\hdroutput.cpp" />
+    <ClCompile Include="..\..\..\src\hdr.imageio\rgbe.cpp" />
+    <ClCompile Include="..\..\..\src\ico.imageio\icoinput.cpp" />
+    <ClCompile Include="..\..\..\src\ico.imageio\icooutput.cpp" />
+    <ClCompile Include="..\..\..\src\iff.imageio\iffinput.cpp" />
+    <ClCompile Include="..\..\..\src\iff.imageio\iffoutput.cpp" />
+    <ClCompile Include="..\..\..\src\iff.imageio\iff_pvt.cpp" />
+    <ClCompile Include="..\..\..\src\jpeg.imageio\jpeginput.cpp" />
+    <ClCompile Include="..\..\..\src\jpeg.imageio\jpegoutput.cpp" />
+    <ClCompile Include="..\..\..\src\png.imageio\pnginput.cpp" />
+    <ClCompile Include="..\..\..\src\png.imageio\pngoutput.cpp" />
+    <ClCompile Include="..\..\..\src\pnm.imageio\pnminput.cpp" />
+    <ClCompile Include="..\..\..\src\pnm.imageio\pnmoutput.cpp" />
+    <ClCompile Include="..\..\..\src\psd.imageio\psdinput.cpp" />
+    <ClCompile Include="..\..\..\src\psd.imageio\psdoutput.cpp" />
+    <ClCompile Include="..\..\..\src\psd.imageio\jpeg_memory_src.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptexinput.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptexoutput.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexCache.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexFilters.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexHalf.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexReader.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexSeparableFilter.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexSeparableKernel.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexTriangleFilter.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexTriangleKernel.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexUtils.cpp" />
+    <ClCompile Include="..\..\..\src\ptex.imageio\ptex\PtexWriter.cpp" />
+    <ClCompile Include="..\..\..\src\openexr.imageio\exrinput.cpp" />
+    <ClCompile Include="..\..\..\src\openexr.imageio\exroutput.cpp" />
+    <ClCompile Include="..\..\..\src\rla.imageio\rlainput.cpp" />
+    <ClCompile Include="..\..\..\src\rla.imageio\rlaoutput.cpp" />
+    <ClCompile Include="..\..\..\src\sgi.imageio\sgiinput.cpp" />
+    <ClCompile Include="..\..\..\src\sgi.imageio\sgioutput.cpp" />
+    <ClCompile Include="..\..\..\src\softimage.imageio\softimageinput.cpp" />
+    <ClCompile Include="..\..\..\src\softimage.imageio\softimageoutput.cpp" />
+    <ClCompile Include="..\..\..\src\softimage.imageio\softimage_pvt.cpp" />
+    <ClCompile Include="..\..\..\src\targa.imageio\targainput.cpp" />
+    <ClCompile Include="..\..\..\src\targa.imageio\targaoutput.cpp" />
+    <ClCompile Include="..\..\..\src\tiff.imageio\tiffinput.cpp" />
+    <ClCompile Include="..\..\..\src\tiff.imageio\tiffoutput.cpp" />
+    <ClCompile Include="..\..\..\src\zfile.imageio\zfile.cpp" />
+    <ClCompile Include="..\..\..\src\socket.imageio\socketinput.cpp" />
+    <ClCompile Include="..\..\..\src\socket.imageio\socketoutput.cpp" />
+    <ClCompile Include="..\..\..\src\socket.imageio\socket_pvt.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:/file/code/sdk/oiio/build/ZERO_CHECK.vcxproj">
+      <Project>3E4D9875-2898-4453-B032-A922FB6E8B57</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
