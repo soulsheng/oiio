@@ -133,3 +133,4 @@ testsuite/runtest.pyc
 /build/src/testtex/*.dir
 /build12/src/libOpenImageIO/x64
 /build12/x64
+/build12/src/iinfo/x64
