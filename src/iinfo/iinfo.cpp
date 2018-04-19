@@ -604,7 +604,7 @@ parse_files (int argc, const char *argv[])
 int
 main (int argc, const char *argv[])
 {
-    Filesystem::convert_native_arguments (argc, (const char **)argv);
+    //Filesystem::convert_native_arguments (argc, (const char **)argv);
     ArgParse ap;
     ap.options ("iinfo -- print information about images\n"
                 OIIO_INTRO_STRING "\n"
@@ -651,9 +651,14 @@ main (int argc, const char *argv[])
         }
         ImageSpec spec = in->spec();
         print_info (s, longestname, in, spec, verbose, sum, totalsize);
+
+		ImageBuf image(s);
+		ImageSpec image_spec = image.spec();
+		print_info(s, longestname, in, spec, verbose, sum, totalsize);
+
         in->close ();
         delete in;
-    }
+	}
 
     if (sum) {
         double t = (double)totalsize / (1024.0*1024.0);
