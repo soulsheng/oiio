@@ -472,7 +472,7 @@ Filesystem::current_path()
 FILE*
 Filesystem::fopen (string_view path, string_view mode)
 {
-#ifdef _WIN32
+#if 0// def _WIN32
     // on Windows fopen does not accept UTF-8 paths, so we convert to wide char
     std::wstring wpath = Strutil::utf8_to_utf16 (path);
     std::wstring wmode = Strutil::utf8_to_utf16 (mode);
